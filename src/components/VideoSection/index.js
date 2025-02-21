@@ -49,6 +49,7 @@ export const VideoLayout = styled.div`
 
 export const Video = styled.video`
   width: 100%;
+  height: auto;
 `;
 
 const VideoSection = () => {
@@ -69,6 +70,8 @@ const VideoSection = () => {
           autoPlay
           muted
           loop
+          playsInline
+          controls
           type="video/mp4"
           ref={videoRef}
         />

@@ -64,12 +64,12 @@ const Logo = styled.img`
   left: 20px;
   @media screen and (max-width: 768px) {
     width: 100px;
-    height: 100px;
+    height: 48px;
   }
 
   @media screen and (max-width: 480px) {
     width: 60px;
-    height: 60px;
+    height: 29px;
   }
 `;
 
