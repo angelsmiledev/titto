@@ -25,49 +25,6 @@ export const PiecesIcon = styled.img`
     height: 200px;
     width: 200px;
   }
-  /* Randomize positions */
-  &:nth-child(1) {
-    transform: rotate(15deg);
-  }
-
-  &:nth-child(2) {
-    transform: rotate(-10deg);
-  }
-
-  &:nth-child(3) {
-    transform: rotate(30deg);
-  }
-
-  &:nth-child(4) {
-    transform: rotate(-5deg);
-  }
-
-  &:nth-child(5) {
-    transform: rotate(-25deg);
-  }
-
-  &:nth-child(6) {
-    transform: rotate(-22deg);
-  }
-
-  &:nth-child(7) {
-    transform: rotate(12deg);
-  }
-
-  &:nth-child(8) {
-    transform: rotate(-20deg);
-  }
-
-  &:nth-child(9) {
-    transform: rotate(18deg);
-  }
-
-  &:nth-child(10) {
-    transform: rotate(-12deg);
-  }
-  &:hover {
-    transform: scale(1.1) rotate(0deg);
-  }
 `;
 
 export const VideoWrapper = styled.div`
@@ -94,15 +51,5 @@ export const Video = styled.video`
   @media screen and (max-width: 480px) {
     height: 200px;
     width: 200px;
-  }
-  &:nth-child(1) {
-    transform: rotate(15deg);
-  }
-
-  &:nth-child(2) {
-    transform: rotate(-10deg);
-  }
-  &:hover {
-    transform: scale(1.1) rotate(0deg);
   }
 `;

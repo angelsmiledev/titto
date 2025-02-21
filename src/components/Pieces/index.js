@@ -41,7 +41,7 @@ const Pieces = () => {
     <PiecesContainer id="Pieces">
       <VideoWrapper>
         {videos.map((video, _id) => (
-          <Video key={`video-meme-${_id}`} src={video} autoPlay muted />
+          <Video key={`video-meme-${_id}`} src={video} autoPlay muted loop />
         ))}
       </VideoWrapper>
       <PiecesWrapper>

@@ -25,7 +25,7 @@ export const Video = styled.video`
 const VideoSection = () => {
   return (
     <VideoWrapper>
-      <Video src={VideoSrc} autoPlay muted type="video/mp4" />
+      <Video src={VideoSrc} autoPlay muted type="video/mp4" controls />
     </VideoWrapper>
   );
 };
