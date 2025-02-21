@@ -23,18 +23,7 @@ const Pieces = () => {
   const [images, setImages] = useState([]);
   const [videos, setVideos] = useState([]);
   useEffect(() => {
-    setImages([
-      Icon1,
-      Icon2,
-      Icon3,
-      Icon4,
-      Icon5,
-      Icon6,
-      Icon7,
-      Icon8,
-      Icon9,
-      Icon10,
-    ]);
+    setImages([Icon1, Icon3, Icon5, Icon6, Icon7, Icon8, Icon9, Icon10]);
     setVideos([Video1, Video2]);
   }, []);
   return (

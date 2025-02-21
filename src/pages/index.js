@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import styled from "styled-components";
 import VideoSection from "../components/VideoSection";
 import Pieces from "../components/Pieces";
+import logo from "../images/logo.png";
 
 const Container = styled.div`
   background-image: url("/images/bg.webp"); /* Replace with your image URL */
@@ -33,6 +34,15 @@ const TextH1 = styled.h1`
   }
 `;
 
+const Logo = styled.img`
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+  top: 20px;
+  left: 20px;
+`;
+
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,6 +55,7 @@ const Home = () => {
       <Sidebar $isOpen={isOpen} toggle={toggle} />
       {/* <Navbar toggle={toggle}/> */}
       <HeroSection />
+      <Logo src={logo} alt="logo" />
       <VideoSection />
       <TextH1>EVERY MEME IN ONE...WITH TITS</TextH1>
       <TextH1>THE UNIVERSE WE ARE ALL TITTO.</TextH1>
