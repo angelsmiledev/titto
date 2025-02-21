@@ -58,7 +58,7 @@ const TextH2 = styled.h1`
 const Logo = styled.img`
   position: fixed;
   width: 150px;
-  height: 150px;
+  height: 70px;
   z-index: 1;
   top: 20px;
   left: 20px;

@@ -64,7 +64,14 @@ const VideoSection = () => {
   return (
     <VideoWrapper>
       <VideoLayout>
-        <Video src={VideoSrc} autoPlay muted type="video/mp4" ref={videoRef} />
+        <Video
+          src={VideoSrc}
+          autoPlay
+          muted
+          loop
+          type="video/mp4"
+          ref={videoRef}
+        />
         {isMuted && <MuteBtn onClick={toggleMute} />}
         {!isMuted && <UnMuteBtn onClick={toggleMute} />}
       </VideoLayout>
