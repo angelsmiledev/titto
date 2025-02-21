@@ -1,21 +1,11 @@
-import React, { useState } from "react";
-import {
-  HeroContainer,
-  HeroBg,
-  ImageBg,
-  HeroContent,
-  HeroH1,
-  HeroP,
-  HeroBtnWrapper,
-  ArrowForward,
-  ArrowRight,
-} from "./HeroElements";
-import { Button } from "../ButtonElement";
-import { animateScroll as scroll } from "react-scroll";
+import React from "react";
+import { HeroContainer, HeroBg, ImageBg, HeroContent } from "./HeroElements";
+// import { Button } from "../ButtonElement";
+// import { animateScroll as scroll } from "react-scroll";
 import imageSrc from "../../images/banner.png";
 
 const HeroSection = () => {
-  const [hover, setHover] = useState(false);
+  // const [hover, setHover] = useState(false);
 
   // const onHover = () => {
   //   setHover(!hover);
