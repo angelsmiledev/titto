@@ -24,6 +24,13 @@ const TextH1 = styled.h1`
   font-weight: bold;
   color: white;
   line-height: 60px;
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 const Home = () => {

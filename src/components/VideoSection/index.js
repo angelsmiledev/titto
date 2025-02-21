@@ -9,10 +9,16 @@ const VideoWrapper = styled.div`
 
 export const Video = styled.video`
   width: 70%;
-  padding: 50px 100px;
+  padding: 50px 0px;
   height: 100%;
-  @media screen and (max-width: 985px) {
-    width: 90%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 30px 50px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    padding: 20px 30px;
   }
 `;
 

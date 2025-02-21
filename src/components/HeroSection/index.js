@@ -1,4 +1,4 @@
-import React, { useState, } from 'react';
+import React, { useState } from "react";
 import {
   HeroContainer,
   HeroBg,
@@ -9,38 +9,31 @@ import {
   HeroBtnWrapper,
   ArrowForward,
   ArrowRight,
-} from './HeroElements';
-import { Button } from '../ButtonElement';
-import { animateScroll as scroll } from 'react-scroll';
-import imageSrc from '../../images/banner.jpg';
+} from "./HeroElements";
+import { Button } from "../ButtonElement";
+import { animateScroll as scroll } from "react-scroll";
+import imageSrc from "../../images/banner.png";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
 
+  // const onHover = () => {
+  //   setHover(!hover);
+  // };
 
-  const onHover = () => {
-    setHover(!hover);
-  };
-
-  const toggleBottom = () => {
-    scroll.scrollToBottom();
-  };
+  // const toggleBottom = () => {
+  //   scroll.scrollToBottom();
+  // };
 
   return (
     <HeroContainer id="home">
       <HeroBg>
-        <ImageBg
-          id="heroImage"
-          src={imageSrc}
-          alt="image banner"
-        />
+        <ImageBg id="heroImage" src={imageSrc} alt="image banner" />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Introduction of TiTTO</HeroH1>
-        <HeroP>
-          The Universe we are all TITTO
-        </HeroP>
-        <HeroBtnWrapper>
+        {/* <HeroH1>Introduction of TiTTO</HeroH1> */}
+        {/* <HeroP>The Universe we are all TITTO</HeroP> */}
+        {/* <HeroBtnWrapper>
           <Button
             to="signup"
             onMouseEnter={onHover}
@@ -56,7 +49,7 @@ const HeroSection = () => {
           >
             Lorem Lorem {hover ? <ArrowRight /> : <ArrowForward />}
           </Button>
-        </HeroBtnWrapper>
+        </HeroBtnWrapper> */}
       </HeroContent>
     </HeroContainer>
   );

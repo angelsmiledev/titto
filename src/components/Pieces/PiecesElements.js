@@ -4,18 +4,6 @@ export const PiecesContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media screen and (max-width: 985px) {
-    height: 900px;
-  }
-
-  @media screen and (max-width: 885px) {
-    height: 1100px;
-  }
-
-  @media screen and (max-width: 480px) {
-    height: 300px;
-  }
 `;
 
 export const PiecesWrapper = styled.div`
@@ -34,8 +22,8 @@ export const PiecesIcon = styled.img`
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
   @media screen and (max-width: 985px) {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
   }
   /* Randomize positions */
   &:nth-child(1) {
@@ -83,7 +71,13 @@ export const PiecesIcon = styled.img`
 `;
 
 export const VideoWrapper = styled.div`
-  display: flex;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  align-items: center;
+  padding: 50px;
+
   justify-content: center;
 `;
 
@@ -92,6 +86,15 @@ export const Video = styled.video`
   height: 250px;
   padding: 10px;
   transition: transform 0.3s ease-in-out;
+  @media screen and (max-width: 768px) {
+    height: 200px;
+    width: 200px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 200px;
+    width: 200px;
+  }
   &:nth-child(1) {
     transform: rotate(15deg);
   }
