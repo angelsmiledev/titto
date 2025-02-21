@@ -22,7 +22,9 @@ const Container = styled.div`
 `;
 
 const TextH1 = styled.h1`
+  font-family: Atop;
   font-weight: bold;
+  font-size: 62px;
   color: white;
   line-height: 60px;
   @media screen and (max-width: 768px) {
@@ -34,6 +36,25 @@ const TextH1 = styled.h1`
   }
 `;
 
+const TextH2 = styled.h1`
+  font-family: Party Vibes;
+  font-weight: bold;
+  font-size: 62px;
+  color: white;
+  line-height: 60px;
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 24px;
+  }
+
+  & > span {
+    font-family: Party Vibes;
+  }
+`;
+
 const Logo = styled.img`
   position: fixed;
   width: 150px;
@@ -41,6 +62,15 @@ const Logo = styled.img`
   z-index: 1;
   top: 20px;
   left: 20px;
+  @media screen and (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const Home = () => {
@@ -58,7 +88,9 @@ const Home = () => {
       <Logo src={logo} alt="logo" />
       <VideoSection />
       <TextH1>EVERY MEME IN ONE...WITH TITS</TextH1>
-      <TextH1>THE UNIVERSE WE ARE ALL TITTO.</TextH1>
+      <TextH2>
+        THE UNIVERSE WE ARE ALL <span style={{ color: "#fab3ed" }}>TITTO</span>.
+      </TextH2>
       <Pieces />
       {/* <ContactForm {...contactForm} /> */}
       <Footer />

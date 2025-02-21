@@ -16,14 +16,13 @@ export const PiecesWrapper = styled.div`
 `;
 
 export const PiecesIcon = styled.img`
-  height: 250px;
-  width: 250px;
+  width: 75%;
   padding: 30px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
   @media screen and (max-width: 985px) {
-    height: 200px;
-    width: 200px;
+    padding: 10px 0px;
+    width: 90%;
   }
 `;
 
@@ -39,17 +38,14 @@ export const VideoWrapper = styled.div`
 `;
 
 export const Video = styled.video`
-  width: 250px;
-  height: 250px;
+  width: 75%;
   padding: 10px;
   transition: transform 0.3s ease-in-out;
   @media screen and (max-width: 768px) {
-    height: 200px;
-    width: 200px;
+    width: 80%;
   }
 
   @media screen and (max-width: 480px) {
-    height: 200px;
-    width: 200px;
+    width: 90%;
   }
 `;

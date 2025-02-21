@@ -5,3 +5,16 @@
   font-family: 'Jost', sans-serif;
 }
 
+@font-face {
+  font-family: 'Atop';
+  src: url('./assets/fonts/Atop.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Party Vibes';
+  src: url('./assets/fonts/Party\ Vibes.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
