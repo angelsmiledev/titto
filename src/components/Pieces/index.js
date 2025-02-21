@@ -1,26 +1,49 @@
 import React, { useEffect, useState } from "react";
-import Icon1 from "../../images/hydrovactruck.png";
-import Icon2 from "../../images/marineassetretrieval.png";
-import Icon3 from "../../images/pipelineservices.jpeg";
-import Icon4 from "../../images/firstaid.jpeg";
-import Icon5 from "../../images/streetsweeper.png";
-import Icon6 from "../../images/environmentaltruck.png";
+import Icon1 from "../../images/1.png";
+import Icon2 from "../../images/2.png";
+import Icon3 from "../../images/3.png";
+import Icon4 from "../../images/4.png";
+import Icon5 from "../../images/5.png";
+import Icon6 from "../../images/6.png";
+import Icon7 from "../../images/7.png";
+import Icon8 from "../../images/8.png";
+import Icon9 from "../../images/9.png";
+import Icon10 from "../../images/10.png";
+import Video1 from "../../videos/video1.MP4";
+import Video2 from "../../videos/video2.MP4";
 import {
   PiecesContainer,
-  PiecesH1,
   PiecesWrapper,
-  PiecesCard,
   PiecesIcon,
+  VideoWrapper,
+  Video,
 } from "./PiecesElements";
 
 const Pieces = () => {
   const [images, setImages] = useState([]);
+  const [videos, setVideos] = useState([]);
   useEffect(() => {
-    setImages([Icon1, Icon2, Icon3, Icon4, Icon5, Icon6]);
+    setImages([
+      Icon1,
+      Icon2,
+      Icon3,
+      Icon4,
+      Icon5,
+      Icon6,
+      Icon7,
+      Icon8,
+      Icon9,
+      Icon10,
+    ]);
+    setVideos([Video1, Video2]);
   }, []);
   return (
     <PiecesContainer id="Pieces">
-      <PiecesH1>Memes & Art Pieces</PiecesH1>
+      <VideoWrapper>
+        {videos.map((video, _id) => (
+          <Video key={`video-meme-${_id}`} src={video} autoPlay muted />
+        ))}
+      </VideoWrapper>
       <PiecesWrapper>
         {images.map((img, _id) => (
           <PiecesIcon key={`image-meme-${_id}`} src={img} alt="Meme" />

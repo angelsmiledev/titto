@@ -1,5 +1,4 @@
 import React from "react";
-import { animateScroll as scroll } from "react-scroll";
 import {
   FaFacebook,
   FaInstagram,
@@ -10,23 +9,17 @@ import {
 import {
   FooterContainer,
   FooterWrap,
-  FooterLinksContainer,
-  FooterLinksWrapper,
-  FooterLinkItems,
-  FooterLinkTitle,
   SocialMedia,
   SocialMediaWrap,
-  SocialLogo,
-  WebsiteRights,
   SocialIcons,
   SocialIconLink,
 } from "./FooterElements";
 
 const Footer = () => {
   //function that scrolls to top of page
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
+  //   const toggleHome = () => {
+  //     scroll.scrollToTop();
+  //   };
 
   return (
     <FooterContainer id="footer">

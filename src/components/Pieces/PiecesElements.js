@@ -1,18 +1,16 @@
 import styled from "styled-components";
 
 export const PiecesContainer = styled.div`
-  height: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   @media screen and (max-width: 985px) {
-    height: 300px;
+    height: 900px;
   }
 
   @media screen and (max-width: 885px) {
-    height: 300px;
+    height: 1100px;
   }
 
   @media screen and (max-width: 480px) {
@@ -21,98 +19,87 @@ export const PiecesContainer = styled.div`
 `;
 
 export const PiecesWrapper = styled.div`
-  width: 60%;
-  height: 200px;
+  width: 100%;
   position: relative;
   margin: 0 auto;
   display: block;
   align-items: center;
-  padding: 0 50px;
-`;
-
-export const PiecesCard = styled.div`
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 10px;
-  max-height: 340px;
-  padding: 30px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    transform: scale(1.02);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-  }
+  padding: 50px;
 `;
 
 export const PiecesIcon = styled.img`
-  height: 180px;
-  width: 180px;
-  margin: 30px;
-  position: absolute;
+  height: 250px;
+  width: 250px;
+  padding: 30px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+  @media screen and (max-width: 985px) {
+    height: 150px;
+    width: 150px;
+  }
   /* Randomize positions */
   &:nth-child(1) {
-    top: 10%;
-    left: 20%;
     transform: rotate(15deg);
   }
 
   &:nth-child(2) {
-    top: 40%;
-    left: 70%;
     transform: rotate(-10deg);
   }
 
   &:nth-child(3) {
-    top: 20%;
-    left: 40%;
     transform: rotate(30deg);
   }
 
   &:nth-child(4) {
-    top: 60%;
-    left: 10%;
-    transform: rotate(5deg);
+    transform: rotate(-5deg);
   }
 
   &:nth-child(5) {
-    top: 80%;
-    left: 80%;
     transform: rotate(-25deg);
   }
 
   &:nth-child(6) {
-    top: 30%;
-    left: 50%;
+    transform: rotate(-22deg);
+  }
+
+  &:nth-child(7) {
     transform: rotate(12deg);
   }
+
+  &:nth-child(8) {
+    transform: rotate(-20deg);
+  }
+
+  &:nth-child(9) {
+    transform: rotate(18deg);
+  }
+
+  &:nth-child(10) {
+    transform: rotate(-12deg);
+  }
   &:hover {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1) rotate(0deg);
   }
 `;
 
-export const PiecesH1 = styled.h1`
-  font-size: 2.5rem;
-  color: #fff;
-  margin-bottom: 64px;
+export const VideoWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
-  @media screen and (max-width: 480px) {
-    font-size: 2rem;
+export const Video = styled.video`
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+  &:nth-child(1) {
+    transform: rotate(15deg);
   }
-`;
 
-export const PiecesH2 = styled.h2`
-  font-size: 1rem;
-  margin-bottom: 10px;
-`;
-
-export const PiecesP = styled.p`
-  font-size: 1rem;
-  text-align: center;
+  &:nth-child(2) {
+    transform: rotate(-10deg);
+  }
+  &:hover {
+    transform: scale(1.1) rotate(0deg);
+  }
 `;

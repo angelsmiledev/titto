@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
-import ContactForm from "../components/ContactForm";
-import { contactForm } from "../components/ContactForm/Data";
 import styled from "styled-components";
 import VideoSection from "../components/VideoSection";
 import Pieces from "../components/Pieces";
@@ -19,6 +17,7 @@ const Container = styled.div`
   align-items: center;
   color: white;
   text-align: center;
+  background-attachment: fixed;
 `;
 
 const TextH1 = styled.h1`

@@ -11,6 +11,9 @@ export const Video = styled.video`
   width: 70%;
   padding: 50px 100px;
   height: 100%;
+  @media screen and (max-width: 985px) {
+    width: 90%;
+  }
 `;
 
 const VideoSection = () => {
