@@ -72,6 +72,7 @@ const VideoSection = () => {
           loop
           playsInline
           controls
+          preload="auto"
           type="video/mp4"
           ref={videoRef}
         />

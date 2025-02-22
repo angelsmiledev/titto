@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Icon1 from "../../images/1.png";
-import Icon2 from "../../images/2.png";
 import Icon3 from "../../images/3.png";
-import Icon4 from "../../images/4.png";
 import Icon5 from "../../images/5.png";
 import Icon6 from "../../images/6.png";
 import Icon7 from "../../images/7.png";
@@ -37,6 +35,7 @@ const Pieces = () => {
             muted
             loop
             playsInline
+            preload="auto"
             controls
           />
         ))}
