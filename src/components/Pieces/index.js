@@ -9,6 +9,7 @@ import Icon9 from "../../images/9.png";
 import Icon10 from "../../images/10.png";
 import Video1 from "../../videos/video1.MP4";
 import Video2 from "../../videos/video2.MP4";
+import textImg from "../../images/text.png";
 import {
   PiecesContainer,
   PiecesWrapper,
@@ -26,6 +27,9 @@ const Pieces = () => {
   }, []);
   return (
     <PiecesContainer id="Pieces">
+      <PiecesWrapper>
+        <PiecesIcon src={textImg} alt="textImage" />
+      </PiecesWrapper>
       <VideoWrapper>
         {videos.map((video, _id) => (
           <Video

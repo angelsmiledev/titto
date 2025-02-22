@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import VideoSrc from "../../videos/video.mp4";
+import VideoSrc from "../../videos/FINAL TRIPPY TITTO.mp4";
 import { GoUnmute, GoMute } from "react-icons/go";
 
 const VideoWrapper = styled.div`
