@@ -29,10 +29,10 @@ const ImageLayer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   position: fixed;
-  top: 50%;
-  width: 40vw; /* Adjust size as needed */
-  height: 120vh; /* Adjust size as needed */
-  transform: ${({ scale, side }) => `translate(-50%, -50%) scale(${scale})`};
+  top: -10%;
+  width: 50vw; /* Adjust size as needed */
+  height: 125vh; /* Adjust size as needed */
+  transform: ${({ translateY, side }) => `translate(-50%, ${translateY}%)`};
   transition: transform 0.2s ease-out;
   z-index: 0;
   pointer-events: none;
@@ -40,13 +40,15 @@ const ImageLayer = styled.div`
     side === "left" ? "5%" : "95%"}; /* Align left or right */
 
   @media screen and (max-width: 768px) {
-    height: 90vh;
-    left: ${({ side }) => (side === "left" ? "7%" : "93%")};
+    height: 120vh;
+    left: ${({ side }) =>
+      side === "left" ? "8%" : "92%"}; /* Align left or right */
   }
 
   @media screen and (max-width: 480px) {
-    height: 90vh;
-    left: ${({ side }) => (side === "left" ? "7%" : "93%")};
+    height: 120vh;
+    left: ${({ side }) =>
+      side === "left" ? "8%" : "92%"}; /* Align left or right */
   }
 `;
 // const TextH1 = styled.h1`
@@ -100,26 +102,38 @@ const Logo = styled.img`
     height: 29px;
   }
 `;
-
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scale, setScale] = useState(1); // Original size
-
+  const [translateY, setTranslateY] = useState(0); // Initial position
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
-  // Zoom out effect on scroll
   const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const zoomOut = 1 - scrollPosition * 0.0001; // Faster zoom-out
-    setScale(Math.max(0.8, zoomOut)); // Zoom out to 70% of original size
+    const movementSpeed = 0.1; // Slower movement speed
+    const movementRange = 5; // Fixed movement range (both up and down)
+
+    // If scrolling up, translateY will be more negative (move up)
+    // If scrolling down, translateY will be positive (move down)
+    setTranslateY((prevTranslateY) => {
+      // Calculate the new translateY with the fixed range
+      let newTranslateY = prevTranslateY;
+
+      // Detect scroll direction and apply movement
+      if (window.scrollY > 0) {
+        newTranslateY = Math.min(newTranslateY + movementSpeed, movementRange); // Move down but don't exceed the range
+      } else {
+        newTranslateY = Math.max(newTranslateY - movementSpeed, -movementRange); // Move up but don't exceed the range
+      }
+
+      return newTranslateY;
+    });
 
     clearTimeout(window.scrollTimeout);
     // Reset when scrolling stops
     window.scrollTimeout = setTimeout(() => {
-      setScale(1);
-    }, 200);
+      setTranslateY(0); // Reset to original position when scrolling stops
+    }, 300); // Adjust the reset timeout
   };
 
   useEffect(() => {
@@ -129,9 +143,19 @@ const Home = () => {
 
   return (
     <Container>
-      <ImageLayer side="left" imageUrl="/images/planet1.png" scale={scale} />
+      {/* Fixed image on the left */}
+      <ImageLayer
+        side="left"
+        imageUrl="/images/planet1.png"
+        translateY={translateY}
+      />
       {/* Fixed image on the right */}
-      <ImageLayer side="right" imageUrl="/images/planet2.png" scale={scale} />
+      <ImageLayer
+        side="right"
+        imageUrl="/images/planet2.png"
+        translateY={translateY}
+      />
+
       <Sidebar $isOpen={isOpen} toggle={toggle} />
       {/* <Navbar toggle={toggle}/> */}
       <HeroSection />
