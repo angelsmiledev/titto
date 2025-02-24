@@ -5,7 +5,6 @@ import Icon5 from "../../images/5.png";
 import Icon6 from "../../images/6.png";
 import Icon7 from "../../images/7.png";
 import Icon8 from "../../images/8.png";
-import Icon9 from "../../images/9.png";
 import Icon10 from "../../images/10.png";
 import Video1 from "../../videos/video1.MP4";
 import Video2 from "../../videos/video2.MP4";
@@ -22,7 +21,7 @@ const Pieces = () => {
   const [images, setImages] = useState([]);
   const [videos, setVideos] = useState([]);
   useEffect(() => {
-    setImages([Icon1, Icon3, Icon5, Icon6, Icon7, Icon8, Icon9, Icon10]);
+    setImages([Icon1, Icon3, Icon5, Icon6, Icon7, Icon8, Icon10]);
     setVideos([Video1, Video2]);
   }, []);
   return (
