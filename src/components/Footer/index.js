@@ -1,12 +1,5 @@
 import React from "react";
 import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
-import {
   FooterContainer,
   FooterWrap,
   SocialMedia,
@@ -14,6 +7,10 @@ import {
   SocialIcons,
   SocialIconLink,
 } from "./FooterElements";
+
+import InstagramIcon from "../../images/socials/instagram.png";
+import TelegramIcon from "../../images/socials/telegram.png";
+import TwitterIcon from "../../images/socials/twitter.png";
 
 const Footer = () => {
   //function that scrolls to top of page
@@ -31,24 +28,14 @@ const Footer = () => {
                         </SocialLogo>
                         <WebsiteRights>Indigenous Iron © {new Date().getFullYear()} All rights reserved</WebsiteRights> */}
             <SocialIcons>
-              <SocialIconLink
-                href="//www.twitter.com/"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <FaFacebook />
-              </SocialIconLink>
               <SocialIconLink href="/" target="_blank" aria-label="Instagram">
-                <FaInstagram />
+                <img src={InstagramIcon} alt="instagram" width={70} />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="YouTube">
-                <FaYoutube />
+              <SocialIconLink href="/" target="_blank" aria-label="Telegram">
+                <img src={TelegramIcon} alt="telegram" width={70} />
               </SocialIconLink>
               <SocialIconLink href="/" target="_blank" aria-label="Twitter">
-                <FaTwitter />
-              </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="LinkedIn">
-                <FaLinkedin />
+                <img src={TwitterIcon} alt="twitter" width={70} />
               </SocialIconLink>
             </SocialIcons>
           </SocialMediaWrap>

@@ -34,7 +34,7 @@ const ImageLayer = styled.div`
   height: 125vh; /* Adjust size as needed */
   transform: ${({ translateY, side }) => `translate(-50%, ${translateY}%)`};
   transition: transform 0.2s ease-out;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
   left: ${({ side }) =>
     side === "left" ? "5%" : "95%"}; /* Align left or right */
@@ -104,36 +104,30 @@ const Logo = styled.img`
 `;
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [translateY, setTranslateY] = useState(0); // Initial position
+  const [translateY, setTranslateY] = useState(0);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
   const handleScroll = () => {
-    const movementSpeed = 0.1; // Slower movement speed
-    const movementRange = 5; // Fixed movement range (both up and down)
-
-    // If scrolling up, translateY will be more negative (move up)
-    // If scrolling down, translateY will be positive (move down)
+    const movementSpeed = 0.1;
+    const movementRange = 5;
     setTranslateY((prevTranslateY) => {
-      // Calculate the new translateY with the fixed range
       let newTranslateY = prevTranslateY;
 
-      // Detect scroll direction and apply movement
       if (window.scrollY > 0) {
-        newTranslateY = Math.min(newTranslateY + movementSpeed, movementRange); // Move down but don't exceed the range
+        newTranslateY = Math.min(newTranslateY + movementSpeed, movementRange);
       } else {
-        newTranslateY = Math.max(newTranslateY - movementSpeed, -movementRange); // Move up but don't exceed the range
+        newTranslateY = Math.max(newTranslateY - movementSpeed, -movementRange);
       }
 
       return newTranslateY;
     });
 
     clearTimeout(window.scrollTimeout);
-    // Reset when scrolling stops
     window.scrollTimeout = setTimeout(() => {
-      setTranslateY(0); // Reset to original position when scrolling stops
-    }, 300); // Adjust the reset timeout
+      setTranslateY(0);
+    }, 300);
   };
 
   useEffect(() => {
@@ -143,13 +137,11 @@ const Home = () => {
 
   return (
     <Container>
-      {/* Fixed image on the left */}
       <ImageLayer
         side="left"
         imageUrl="/images/planet1.png"
         translateY={translateY}
       />
-      {/* Fixed image on the right */}
       <ImageLayer
         side="right"
         imageUrl="/images/planet2.png"

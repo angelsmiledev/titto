@@ -110,4 +110,8 @@ export const SocialIcons = styled.div`
 export const SocialIconLink = styled.a`
   color: white;
   font-size: 40px;
+  background-size: cover;
+  background-position: center;
+  boder-radius: 50%;
+  z-index: 10;
 `;
