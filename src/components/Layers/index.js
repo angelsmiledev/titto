@@ -12,9 +12,10 @@ const Planets = () => {
   //   useEffect(() => {
   //     setImages([Icon1, Icon2, Icon3, Icon4, Icon5, Icon6]);
   //   }, []);
-  return (
-    <LayerContainer id="Layer">
-      <PlanetContainer>
+
+  const renderRepeatedPlanets = (cnt) => {
+    return Array.from({ length: cnt }).map((_, _id) => (
+      <PlanetContainer key={`planet-container-${_id}`}>
         <Planet $top={20} $left={6} src={Planet1} alt="planet" />
         <Planet $top={60} $left={8} src={Planet2} alt="planet" />
         <Planet $top={85} $left={6} src={Planet3} alt="planet" />
@@ -22,7 +23,10 @@ const Planets = () => {
         <Planet $top={30} $right={8} src={Planet5} alt="planet" />
         <Planet $top={70} $right={6} src={Planet6} alt="planet" />
       </PlanetContainer>
-    </LayerContainer>
+    ));
+  };
+  return (
+    <LayerContainer id="Layer">{renderRepeatedPlanets(11)}</LayerContainer>
   );
 };
 

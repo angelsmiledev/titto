@@ -18,7 +18,7 @@ const Container = styled.div`
   align-items: center;
   color: white;
   text-align: center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   position: relative;
   overflow: hidden;
 `;
@@ -43,8 +43,8 @@ const Logo = styled.img`
 const Home = () => {
   return (
     <Container>
-      <Planets />
       <HeroSection />
+      <Planets />
       {/* <Footer /> */}
       <Logo src={logo} alt="logo" />
       <VideoSection />
