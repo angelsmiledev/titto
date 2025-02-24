@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import styled from "styled-components";
 import VideoSection from "../components/VideoSection";
 import Pieces from "../components/Pieces";
@@ -45,10 +45,10 @@ const Home = () => {
     <Container>
       <Planets />
       <HeroSection />
+      {/* <Footer /> */}
       <Logo src={logo} alt="logo" />
       <VideoSection />
       <Pieces />
-      <Footer />
     </Container>
   );
 };

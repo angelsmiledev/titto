@@ -3,6 +3,7 @@ import { HeroContainer, HeroBg, ImageBg, HeroContent } from "./HeroElements";
 // import { Button } from "../ButtonElement";
 // import { animateScroll as scroll } from "react-scroll";
 import imageSrc from "../../images/banner.png";
+import Footer from "../Footer";
 
 const HeroSection = () => {
   // const [hover, setHover] = useState(false);
@@ -19,6 +20,7 @@ const HeroSection = () => {
     <HeroContainer id="home">
       <HeroBg>
         <ImageBg id="heroImage" src={imageSrc} alt="image banner" />
+        <Footer />
       </HeroBg>
       <HeroContent>
         {/* <HeroH1>Introduction of TiTTO</HeroH1> */}

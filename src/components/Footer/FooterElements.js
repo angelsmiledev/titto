@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
   // background-color: #101522;
+  position: absoulute;
 `;
 
 export const FooterWrap = styled.div`
@@ -73,10 +74,13 @@ export const SocialMedia = styled.section`
 
 export const SocialMediaWrap = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   max-width: 1100px;
-  margin: 40px auto 0 auto;
+  // margin: 40px auto 0 auto;
+  z-index: 1;
+  top: 20px;
+  right: 20px;
 
   @media screen and (max-width: 820px) {
     flex-direction: column;
@@ -105,11 +109,19 @@ export const SocialIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 240px;
+  position: absolute;
+  top: 20px;
+  @media screen and (max-width: 768px) {
+    width: 30%;
+    right: 5%
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 30%;
+    right: 5%;
 `;
 
 export const SocialIconLink = styled.a`
-  color: white;
-  font-size: 40px;
   background-size: cover;
   background-position: center;
   boder-radius: 50%;

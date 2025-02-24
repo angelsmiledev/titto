@@ -29,13 +29,13 @@ const Footer = () => {
                         <WebsiteRights>Indigenous Iron © {new Date().getFullYear()} All rights reserved</WebsiteRights> */}
             <SocialIcons>
               <SocialIconLink href="/" target="_blank" aria-label="Instagram">
-                <img src={InstagramIcon} alt="instagram" width={70} />
+                <img src={InstagramIcon} alt="instagram" width="90%" />
               </SocialIconLink>
               <SocialIconLink href="/" target="_blank" aria-label="Telegram">
-                <img src={TelegramIcon} alt="telegram" width={70} />
+                <img src={TelegramIcon} alt="telegram" width="90%" />
               </SocialIconLink>
               <SocialIconLink href="/" target="_blank" aria-label="Twitter">
-                <img src={TwitterIcon} alt="twitter" width={70} />
+                <img src={TwitterIcon} alt="twitter" width="90%" />
               </SocialIconLink>
             </SocialIcons>
           </SocialMediaWrap>
