@@ -26,7 +26,7 @@ const Planets = () => {
     ));
   };
   return (
-    <LayerContainer id="Layer">{renderRepeatedPlanets(11)}</LayerContainer>
+    <LayerContainer id="Layer">{renderRepeatedPlanets(15)}</LayerContainer>
   );
 };
 
