@@ -111,6 +111,7 @@ export const SocialIcons = styled.div`
   width: 240px;
   position: absolute;
   top: 20px;
+  right: 5%;
   @media screen and (max-width: 768px) {
     width: 30%;
     right: 5%
