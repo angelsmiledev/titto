@@ -2,7 +2,7 @@ import React from "react";
 import { HeroContainer, HeroBg, ImageBg, HeroContent } from "./HeroElements";
 // import { Button } from "../ButtonElement";
 // import { animateScroll as scroll } from "react-scroll";
-import imageSrc from "../../images/banner.png";
+import imageSrc from "../../images/banner.jpg";
 import Footer from "../Footer";
 
 const HeroSection = () => {
