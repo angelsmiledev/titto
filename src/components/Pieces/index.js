@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Icon1 from "../../images/1.png";
+// import Icon1 from "../../images/1.png";
 import Icon3 from "../../images/3.png";
 import Icon5 from "../../images/5.png";
 import Icon6 from "../../images/6.png";
@@ -21,7 +21,7 @@ const Pieces = () => {
   const [images, setImages] = useState([]);
   const [videos, setVideos] = useState([]);
   useEffect(() => {
-    setImages([Icon1, Icon3, Icon5, Icon6, Icon7, Icon8, Icon10]);
+    setImages([Icon3, Icon5, Icon6, Icon7, Icon8, Icon10]);
     setVideos([Video1, Video2]);
   }, []);
   return (
