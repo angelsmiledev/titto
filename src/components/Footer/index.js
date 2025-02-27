@@ -8,7 +8,7 @@ import {
   SocialIconLink,
 } from "./FooterElements";
 
-import InstagramIcon from "../../images/socials/instagram.png";
+// import InstagramIcon from "../../images/socials/instagram.png";
 import TelegramIcon from "../../images/socials/telegram.png";
 import TwitterIcon from "../../images/socials/twitter.png";
 
@@ -28,9 +28,9 @@ const Footer = () => {
                         </SocialLogo>
                         <WebsiteRights>Indigenous Iron © {new Date().getFullYear()} All rights reserved</WebsiteRights> */}
             <SocialIcons>
-              <SocialIconLink href="/" target="_blank" aria-label="Instagram">
+              {/* <SocialIconLink href="/" target="_blank" aria-label="Instagram">
                 <img src={InstagramIcon} alt="instagram" width="90%" />
-              </SocialIconLink>
+              </SocialIconLink> */}
               <SocialIconLink href="/" target="_blank" aria-label="Telegram">
                 <img src={TelegramIcon} alt="telegram" width="90%" />
               </SocialIconLink>
