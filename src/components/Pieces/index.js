@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 // import Icon1 from "../../images/1.png";
+
 import Icon3 from "../../images/3.png";
 import Icon5 from "../../images/5.png";
 import Icon6 from "../../images/6.png";
@@ -12,10 +13,12 @@ import textImg from "../../images/text.png";
 import {
   PiecesContainer,
   PiecesWrapper,
-  PiecesIcon,
+  // PiecesIcon,
   VideoWrapper,
-  Video,
+  // Video,
 } from "./PiecesElements";
+const LazyVideo = lazy(() => import("./LazyVideo"));
+const LazyImage = lazy(() => import("./LazyImage"));
 
 const Pieces = () => {
   const [images, setImages] = useState([]);
@@ -27,26 +30,35 @@ const Pieces = () => {
   return (
     <PiecesContainer id="Pieces">
       <PiecesWrapper>
-        <PiecesIcon src={textImg} alt="textImage" />
+        {/* <PiecesIcon src={textImg} alt="textImage" /> */}
+        <Suspense fallback={<div>Loading ...</div>}>
+          <LazyImage src={textImg} alt="textImage" />
+        </Suspense>
       </PiecesWrapper>
       <VideoWrapper>
-        {videos.map((video, _id) => (
-          <Video
-            key={`video-meme-${_id}`}
-            src={video}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            controls
-          />
-        ))}
+        <Suspense fallback={<div>Loading ... </div>}>
+          {videos.map((video, _id) => (
+            // <Video
+            //   key={`video-meme-${_id}`}
+            //   src={video}
+            //   autoPlay
+            //   muted
+            //   loop
+            //   playsInline
+            //   preload="auto"
+            //   controls
+            // />
+            <LazyVideo key={`video-meme-${_id}`} src={video} />
+          ))}
+        </Suspense>
       </VideoWrapper>
       <PiecesWrapper>
-        {images.map((img, _id) => (
-          <PiecesIcon key={`image-meme-${_id}`} src={img} alt="Meme" />
-        ))}
+        <Suspense fallback={<div>Loading ... </div>}>
+          {images.map((img, _id) => (
+            // <PiecesIcon key={`image-meme-${_id}`} src={img} alt="Meme" />
+            <LazyImage key={`image-meme-${_id}`} src={img} alt="Meme" />
+          ))}
+        </Suspense>
       </PiecesWrapper>
     </PiecesContainer>
   );
