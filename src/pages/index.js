@@ -1,11 +1,11 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
-// import Footer from "../components/Footer";
 import styled from "styled-components";
 import VideoSection from "../components/VideoSection";
 import Pieces from "../components/Pieces";
 import logo from "../images/logo.png";
 import Planets from "../components/Layers";
+import Social from "../components/Social";
 
 const Container = styled.div`
   background-image: url("/images/background.png"); /* Replace with your image URL */
@@ -21,6 +21,13 @@ const Container = styled.div`
   // background-attachment: fixed;
   position: relative;
   overflow: hidden;
+`;
+
+const Footer = styled.footer`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 `;
 
 const Logo = styled.img`
@@ -45,10 +52,12 @@ const Home = () => {
     <Container>
       <HeroSection />
       <Planets />
-      {/* <Footer /> */}
       <Logo src={logo} alt="logo" />
       <VideoSection />
       <Pieces />
+      <Footer id="footer">
+        <Social />
+      </Footer>
     </Container>
   );
 };

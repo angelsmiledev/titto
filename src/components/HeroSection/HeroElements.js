@@ -93,3 +93,13 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
   margin-left: 8px;
   font-size: 30px;
 `;
+
+export const SocialSection = styled.div`
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  right: 0;
+  padding: 20px;
+`;

@@ -12,7 +12,7 @@ export const PiecesWrapper = styled.div`
   margin: 0 auto;
   display: block;
   align-items: center;
-  padding: 50px;
+  padding: 20px 50px 20px 50px;
 `;
 
 export const PiecesIcon = styled.img`
