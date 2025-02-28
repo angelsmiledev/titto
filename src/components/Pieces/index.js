@@ -10,13 +10,7 @@ import Icon10 from "../../images/10.webp";
 import Video1 from "../../videos/video1.MP4";
 import Video2 from "../../videos/video2.MP4";
 import textImg from "../../images/text.png";
-import {
-  PiecesContainer,
-  PiecesWrapper,
-  // PiecesIcon,
-  VideoWrapper,
-  // Video,
-} from "./PiecesElements";
+import { PiecesContainer, PiecesWrapper, VideoWrapper } from "./PiecesElements";
 const LazyVideo = lazy(() => import("./LazyVideo"));
 const LazyImage = lazy(() => import("./LazyImage"));
 
