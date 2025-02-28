@@ -7,8 +7,8 @@ import Icon6 from "../../images/6.webp";
 import Icon7 from "../../images/7.webp";
 import Icon8 from "../../images/8.webp";
 import Icon10 from "../../images/10.webp";
-import Video1 from "../../videos/video1.webm";
-import Video2 from "../../videos/video2.webm";
+import Video1 from "../../videos/video1.MP4";
+import Video2 from "../../videos/video2.MP4";
 import textImg from "../../images/text.png";
 import {
   PiecesContainer,
