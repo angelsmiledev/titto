@@ -20,6 +20,7 @@ const Container = styled.div`
   text-align: center;
   // background-attachment: fixed;
   position: relative;
+  overflow: hidden;
 `;
 
 const Footer = styled.footer`
