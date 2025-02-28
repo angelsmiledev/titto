@@ -1,14 +1,14 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
 // import Icon1 from "../../images/1.png";
 
-import Icon3 from "../../images/3.png";
-import Icon5 from "../../images/5.png";
-import Icon6 from "../../images/6.png";
-import Icon7 from "../../images/7.png";
-import Icon8 from "../../images/8.png";
-import Icon10 from "../../images/10.png";
-import Video1 from "../../videos/video1.MP4";
-import Video2 from "../../videos/video2.MP4";
+import Icon3 from "../../images/3.webp";
+import Icon5 from "../../images/5.webp";
+import Icon6 from "../../images/6.webp";
+import Icon7 from "../../images/7.webp";
+import Icon8 from "../../images/8.webp";
+import Icon10 from "../../images/10.webp";
+import Video1 from "../../videos/video1.webm";
+import Video2 from "../../videos/video2.webm";
 import textImg from "../../images/text.png";
 import {
   PiecesContainer,
